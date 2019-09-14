@@ -46,6 +46,7 @@ INSTALLED_APPS = (
     # internal apps
     'bootstrap3',
     'bootstrap4',
+    'bootstrap4_3',
     'semantic',
 )
 
