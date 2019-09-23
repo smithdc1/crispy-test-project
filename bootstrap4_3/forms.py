@@ -2,7 +2,7 @@
 from django import forms
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Div, Submit, HTML, Button, Row, Field
-from crispy_forms.bootstrap import AppendedText, PrependedText, PrependedAppendedText, FormActions, InlineRadios
+from crispy_forms.bootstrap import AppendedText, PrependedText, PrependedAppendedText, FormActions, InlineRadios, InlineCheckboxes
 
 
 class MessageForm(forms.Form):
@@ -42,6 +42,20 @@ class MessageForm(forms.Form):
              'Option two can also be checked and included in form results'),
             ('option_three',
              'Option three can yes, you guessed it also be checked and included in form results')
+        ),
+        initial='option_one',
+        widget=forms.CheckboxSelectMultiple,
+        help_text="<strong>Note:</strong> Labels surround all the options for much larger click areas and a more usable form.",
+    )
+
+    inline_checkboxes = forms.MultipleChoiceField(
+        choices=(
+            ('option_one',
+             "Option one"),
+            ('option_two',
+             'Option two'),
+            ('option_three',
+             'Option three')
         ),
         initial='option_one',
         widget=forms.CheckboxSelectMultiple,
@@ -100,6 +114,7 @@ class MessageForm(forms.Form):
         'radio_buttons',
         InlineRadios('radio_buttons_inline'),
         Field('checkboxes', style="background: #FAFAFA"),
+        InlineCheckboxes('inline_checkboxes'),
         AppendedText('appended_text', '.00'),
         AppendedText('appended_text2', '.00', css_class='form-control-lg'),
         AppendedText('appended_select', '.00'),
