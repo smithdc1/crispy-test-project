@@ -51,7 +51,7 @@ INSTALLED_APPS = (
     'bootstrap4',
     'bootstrap4_3',
    # 'materialize',
-    'bootstrap',
+   # 'bootstrap',
     'semantic',
 )
 
