@@ -44,7 +44,7 @@ INSTALLED_APPS = (
     # dependencies
     'crispy_forms',
     'crispy_forms_materialize',
-    'crispy-forms-bootstrap2',
+   # 'crispy-forms-bootstrap2',
     'crispy_forms_semantic_ui',
     # internal apps
     'bootstrap3',
