@@ -1,11 +1,26 @@
 # -*- coding: utf-8 -*-
 from django import forms
 from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Layout, Div, Submit, HTML, Button, Row, Field
+from crispy_forms.layout import Layout, Div, Submit, HTML, Button, Row, Field, MultiWidgetField, MultiField
 from crispy_forms.bootstrap import AppendedText, PrependedText, PrependedAppendedText, FormActions, InlineRadios, InlineCheckboxes
 
 
+
+class SampleForm(forms.Form):
+    is_company = forms.CharField(label="company", required=False, widget=forms.CheckboxInput())
+    email = forms.EmailField(label="email", max_length=30, required=True, widget=forms.TextInput(), help_text="Insert your email")
+    password1 = forms.CharField(label="password", max_length=30, required=True, widget=forms.PasswordInput())
+    password2 = forms.CharField(label="re-enter password", max_length=30, required=True, widget=forms.PasswordInput())
+    first_name = forms.CharField(label="first name", max_length=5, required=True, widget=forms.TextInput())
+    last_name = forms.CharField(label="last name", max_length=5, required=True, widget=forms.TextInput())
+    datetime_field = forms.SplitDateTimeField(label="date time", widget=forms.SplitDateTimeWidget())
+
+
+    
 class MessageForm(forms.Form):
+    datetime_field = forms.SplitDateTimeField(label="date time", widget=forms.SplitDateTimeWidget())
+
+
     text_input = forms.CharField()
 
     textarea = forms.CharField(
@@ -109,6 +124,13 @@ class MessageForm(forms.Form):
     # Bootstrap4
     helper = FormHelper()
     helper.layout = Layout(
+        MultiWidgetField(
+            'datetime_field',
+            attrs=(
+                {'class': ''},
+                {'class': 'form-control bg-secondary'}
+            ),
+        ),
         Field('text_input', css_class='form-control-lg'),
         Field('textarea', rows="3", css_class='form-control-lg'),
         'radio_buttons',
@@ -132,6 +154,9 @@ class MessageForm(forms.Form):
             Submit('cancel', 'Cancel'),
         )
     )
+
+
+
 
 class HorizontalMessageForm(forms.Form):
     text_input = forms.CharField()
