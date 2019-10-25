@@ -28,4 +28,4 @@ jobs:
       run: |
         pip install pytest
         pytest
-        Python create_html.py
+        Python create_html
