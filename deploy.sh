@@ -68,7 +68,7 @@ fi
 echo "try to check out"
 # Checks out the base branch to begin the deploy process.
 git remote update
-git fetch
+git  --all
 
 echo ${BASE_BRANCH:-master}
 
