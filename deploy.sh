@@ -68,8 +68,8 @@ fi
 echo "try to check out"
 # Checks out the base branch to begin the deploy process.
 git remote update
-git fetch origin
-git checkout "${BASE_BRANCH:-gh-pages}" && \
+git fetch
+git checkout "${BASE_BRANCH}" && \
 echo "checked out"
 
 # Commits the data to Github.
