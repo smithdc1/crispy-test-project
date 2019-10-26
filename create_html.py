@@ -13,7 +13,6 @@ response = c.get('/bootstrap4')
 #make html pretty
 soup = bs(response.content)                #make BeautifulSoup
 prettyHTML = soup.prettify()
-print(prettyHTML)
 
 #env variable
 print(os.getenv('GITHUB_REF'))
