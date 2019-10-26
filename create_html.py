@@ -6,42 +6,53 @@ import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "test_project.settings")
 django.setup()
 
-#get html
-c = Client()
-response = c.get('/bootstrap4')
 
-#make html pretty
-soup = bs(response.content)                #make BeautifulSoup
-prettyHTML = soup.prettify()
-print(prettyHTML)
+# env variable
+# print(os.getenv('GITHUB_REF'))
+# print(os.getenv('GITHUB_SHA'))
+# print(os.getenv('GITHUB_WORKSPACE'))
 
-#env variable
-print(os.getenv('GITHUB_REF'))
-print(os.getenv('GITHUB_SHA'))
-print(os.getenv('GITHUB_WORKSPACE'))
+def create_filename(pagename):
+    # get github ref (reason for workflow)
+    ref = os.getenv('GITHUB_REF')
 
-#create file name
-ref = os.getenv('GITHUB_REF')
+    # if PR then get PR number from string
+    if 'pull' in ref:
+        start = ref.find(':') + 1
+        end = ref.find('/', start)
+        ref = ref[start:end] + '-'
+        print(ref)
 
-if 'pull' in ref:
-	start = ref.find(':')+1
-	end = ref.find('/',start)
-	ref= ref[start:end] + '-'
-	print(ref)
+    # if not PR then push
+    else:
+        ref = 'push-'
 
-else:
-	ref = 'push-'
+    return ref + pagename + '-' + os.getenv('GITHUB_SHA') + '.html'
 
-filename = ref + os.getenv('GITHUB_SHA') + '.html'
 
-print(filename)
+# make docs folder
+try:
+    os.makedirs(os.getcwd() + '/build/docs/')
+    os.makedirs(os.getcwd() + '/docs/')
+except FileExistsError:
+    print('folder already exists')
 
-#make docs folder
 
-os.makedirs(os.getcwd() + '/docs/')
-path = os.getcwd() + '/docs/' + filename
-print(path)
+pages = ['boostrap4', 'boostrap3', 'semantic']
 
-with open("path", "w") as file:
-    file.write(prettyHTML)
+for page in pages:
+    # get html
+    c = Client()
+    response = c.get("/" + page)
 
+    # make html pretty
+    soup = bs(response.content, "html.parser")  # make BeautifulSoup
+    prettyHTML = soup.prettify()
+
+    # set save location
+    path = os.getcwd() + '/docs/' + create_filename(page)
+    print(path)
+
+    # save html
+    with open(path, "w") as file:
+        file.write(prettyHTML)

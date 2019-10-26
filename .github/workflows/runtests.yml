@@ -1,6 +1,10 @@
 name: Python application
 
-on: [push]
+on: 
+  push:
+    branches: 
+      - master
+      - create_html
 
 jobs:
   build:
@@ -31,8 +35,8 @@ jobs:
         python create_html.py
     - name: deploy html
       env:
-        ACCESS_TOKEN: ${{ secrets.GH_PAT }}
-        BASE_BRANCH: master # The branch the action should deploy from.
+        ACCESS_TOKEN: ${{ secrets.GH_PAT  }}
+        BASE_BRANCH: gh-pages # The branch the action should deploy from.
         BRANCH: gh-pages # The branch the action should deploy to.
       run: |
         chmod +x deploy.sh
