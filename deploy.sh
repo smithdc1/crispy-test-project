@@ -69,7 +69,10 @@ echo "try to check out"
 # Checks out the base branch to begin the deploy process.
 git remote update
 git fetch
-git checkout "${BASE_BRANCH}" && \
+
+echo ${BASE_BRANCH:-master}
+
+git checkout "${BASE_BRANCH:-master}" && \
 echo "checked out"
 
 # Commits the data to Github.
