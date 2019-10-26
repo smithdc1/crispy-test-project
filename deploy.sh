@@ -47,8 +47,10 @@ git config --global user.email "${COMMIT_EMAIL}" && \
 git config --global user.name "${COMMIT_NAME}" && \
 echo "configured"
 
+
+echo ${GITHUB_REPOSITORY}
 ## Initializes the repository path using the access token.
-REPOSITORY_PATH="https://${GH_PAT}@github.com/${GITHUB_REPOSITORY}.git" && \
+REPOSITORY_PATH="https://${ ACCESS_TOKEN }@github.com/${GITHUB_REPOSITORY}.git" && \
 echo "Initializes the repository path using the access token"
 
 # Checks to see if the remote exists prior to deploying.
