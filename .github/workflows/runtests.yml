@@ -29,3 +29,12 @@ jobs:
         pip install pytest
         pytest
         python create_html.py
+    - name: deploy html
+      env:
+        ACCESS_TOKEN: ${{ secrets.GH_PAT }}
+        BASE_BRANCH: master # The branch the action should deploy from.
+        BRANCH: gh-pages # The branch the action should deploy to.
+      run: |
+        chmod +x deploy.sh
+        ./deploy.sh    
+    
