@@ -67,6 +67,7 @@ fi
 
 echo "try to check out"
 # Checks out the base branch to begin the deploy process.
+git fetch
 git checkout "${BASE_BRANCH:-gh-pages}" && \
 echo "checked out"
 
