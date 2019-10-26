@@ -70,6 +70,7 @@ echo "try to check out"
 git remote update
 git fetch --all
 echo ${GITHUB_REPOSITORY}
+git branch -a
 
 echo ${BASE_BRANCH:-master}
 
