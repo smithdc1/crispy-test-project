@@ -62,7 +62,7 @@ then
 fi
 
 # Checks out the base branch to begin the deploy process.
-git checkout "${BASE_BRANCH:-master}" && \
+#git checkout "${BASE_BRANCH:-master}" && \
 
 
 # Commits the data to Github.
