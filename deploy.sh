@@ -52,6 +52,7 @@ echo ${GITHUB_REPOSITORY}
 ## Initializes the repository path using the access token.
 REPOSITORY_PATH="https://${ACCESS_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" && \
 echo "Initializes the repository path using the access token"
+echo "$(git branch -vv)"
 
 # Checks to see if the remote exists prior to deploying.
 # If the branch doesn't exist it gets created here as an orphan.
