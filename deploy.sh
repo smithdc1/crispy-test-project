@@ -36,16 +36,20 @@ then
   COMMIT_NAME="${GITHUB_ACTOR:-GitHub Pages Deploy Action}"
 fi
 
+echo "change directory"
 # Directs the action to the the Github workspace.
 cd $GITHUB_WORKSPACE/build && \
 
 # Configures Git.
+echo "git init"
 git init && \
 git config --global user.email "${COMMIT_EMAIL}" && \
 git config --global user.name "${COMMIT_NAME}" && \
+echo "configured"
 
 ## Initializes the repository path using the access token.
 REPOSITORY_PATH="https://${ACCESS_TOKEN:-"x-access-token:$GITHUB_TOKEN"}@github.com/${GITHUB_REPOSITORY}.git" && \
+echo "Initializes the repository path using the access token"
 
 # Checks to see if the remote exists prior to deploying.
 # If the branch doesn't exist it gets created here as an orphan.
