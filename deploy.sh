@@ -82,8 +82,7 @@ echo "checked out"
 
 # Commits the data to Github.
 echo "Deploying to GitHub..." && \
-echo $FOLDER
-git add -f $FOLDER && 
+git add -f docs && \
 
 
 echo "git commit -m "Deploying to ${BRANCH} from ${BASE_BRANCH:-gh-pages} ${GITHUB_SHA}" --quiet && \"
