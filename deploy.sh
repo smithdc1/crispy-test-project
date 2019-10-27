@@ -85,7 +85,7 @@ echo ${BASE_BRANCH:-master}
 
 #copy files
 echo "copy files"
-cp $GITHUB_WORKSPACE/docs $GITHUB_WORKSPACE/build
+cp -a $GITHUB_WORKSPACE/docs/. $GITHUB_WORKSPACE/build/
 
 
 echo "build folder"
