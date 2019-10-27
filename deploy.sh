@@ -76,13 +76,25 @@ echo "try to check out"
 git remote update
 git fetch --all
 echo ${GITHUB_REPOSITORY}
-echo git branch -a
+#echo git branch -a
 
 echo ${BASE_BRANCH:-master}
 
 #git checkout gh-pages && \
-echo "checked out"
+#echo "checked out"
 
+#copy files
+echo "copy files"
+cp $GITHUB_WORKSPACE/docs $GITHUB_WORKSPACE/build
+
+
+echo "build folder"
+for entry in "$GITHUB_WORKSPACE/build"/*
+do
+  echo "$entry"
+done
+
+echo "docs folder"
 for entry in "$GITHUB_WORKSPACE/build/docs"/*
 do
   echo "$entry"
