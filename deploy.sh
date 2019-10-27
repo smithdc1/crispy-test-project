@@ -101,8 +101,8 @@ fi
 
 echo "try to check out"
 # Checks out the base branch to begin the deploy process.
-git remote update
-git fetch --all
+#git remote update
+#git fetch --all
 echo ${GITHUB_REPOSITORY}
 #echo git branch -a
 
@@ -144,6 +144,6 @@ git add -f docs && \
 
 
 git commit -m "Deploying to ${BRANCH} from ${BASE_BRANCH:-gh-pages} ${GITHUB_SHA}" && \
-git push $REPOSITORY_PATH `git subtree split --prefix $FOLDER ${BASE_BRANCH:-gh-pages}`:$BRANCH --force && \"
+#git push $REPOSITORY_PATH `git subtree split --prefix $FOLDER ${BASE_BRANCH:-gh-pages}`:$BRANCH --force && \"
 
 echo "Deployment succesful!"
