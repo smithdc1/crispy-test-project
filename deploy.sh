@@ -143,7 +143,7 @@ echo "Deploying to GitHub..." && \
 git add -f docs && \
 
 
-git commit -m "Deploying to ${BRANCH} from ${BASE_BRANCH:-gh-pages} ${GITHUB_SHA}" --quiet && \
+git commit -m "Deploying to ${BRANCH} from ${BASE_BRANCH:-gh-pages} ${GITHUB_SHA}" && \
 git push $REPOSITORY_PATH `git subtree split --prefix $FOLDER ${BASE_BRANCH:-gh-pages}`:$BRANCH --force && \"
 
 echo "Deployment succesful!"
