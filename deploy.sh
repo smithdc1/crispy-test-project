@@ -59,6 +59,8 @@ fi
 echo "change directory"
 # Directs the action to the the Github workspace.
 cd $HOME && \
+mkdir build
+cd build
 
 # Configures Git.
 echo "git init"
