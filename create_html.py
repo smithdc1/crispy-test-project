@@ -42,6 +42,6 @@ os.makedirs(os.getcwd() + '/docs/')
 path = os.getcwd() + '/docs/'+ filename
 print(path)
 
-with open("path", "w") as file:
+with open(path, "w") as file:
     file.write(prettyHTML)
 
