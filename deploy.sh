@@ -62,6 +62,12 @@ cd $HOME && \
 mkdir build
 cd build
 
+echo "home"
+for entry in "$HOME"/*
+do
+  echo "$entry"
+done
+
 # Configures Git.
 echo "git init"
 git init && \
