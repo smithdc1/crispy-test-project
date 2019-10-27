@@ -2,6 +2,20 @@
 
 set -e
 
+echo "docs folder"
+for entry in "$GITHUB_WORKSPACE/docs"/*
+do
+  echo "$entry"
+done
+
+echo "workspace folder"
+for entry in "$GITHUB_WORKSPACE"/*
+do
+  echo "$entry"
+done
+
+
+
 if [ -z "$ACCESS_TOKEN" ] && [ -z "$GITHUB_TOKEN" ]
 then
   echo "You must provide the action with either a Personal Access Token or the GitHub Token secret in order to deploy."
