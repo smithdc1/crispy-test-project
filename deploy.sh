@@ -53,7 +53,7 @@ echo ${GITHUB_REPOSITORY}
 REPOSITORY_PATH="https://${ACCESS_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" && \
 echo "Initializes the repository path using the access token"
 
-git pull $REPOSITORY_PATH gh-pages
+#git pull $REPOSITORY_PATH gh-pages
 
 
 
@@ -80,7 +80,7 @@ echo git branch -a
 
 echo ${BASE_BRANCH:-master}
 
-git checkout "${BASE_BRANCH:-master}" && \
+git checkout gh-pages && \
 echo "checked out"
 
 for entry in "$GITHUB_WORKSPACE/build/docs"/*
