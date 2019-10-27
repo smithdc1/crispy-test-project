@@ -83,9 +83,17 @@ echo ${BASE_BRANCH:-master}
 #git checkout gh-pages && \
 #echo "checked out"
 
+
+echo "docs folder"
+for entry in "$GITHUB_WORKSPACE/docs"/*
+do
+  echo "$entry"
+done
+
 #copy files
 echo "copy files"
 cp -a $GITHUB_WORKSPACE/docs/. $GITHUB_WORKSPACE/build/
+
 
 
 echo "build folder"
@@ -94,7 +102,7 @@ do
   echo "$entry"
 done
 
-echo "docs folder"
+echo "build docs folder"
 for entry in "$GITHUB_WORKSPACE/build/docs"/*
 do
   echo "$entry"
