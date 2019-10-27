@@ -40,10 +40,6 @@ echo "change directory"
 # Directs the action to the the Github workspace.
 cd $GITHUB_WORKSPACE/build && \
 
-# copy files
-cp $GITHUB_WORKSPACE/docs  $GITHUB_WORKSPACE/build
-
-
 # Configures Git.
 echo "git init"
 git init && \
@@ -86,7 +82,9 @@ echo "checked out"
 
 # Commits the data to Github.
 echo "Deploying to GitHub..." && \
-echo "git add -f $FOLDER && \"
+echo $FOLDER
+git add -f $FOLDER && 
+
 
 echo "git commit -m "Deploying to ${BRANCH} from ${BASE_BRANCH:-gh-pages} ${GITHUB_SHA}" --quiet && \"
 echo "git push $REPOSITORY_PATH `git subtree split --prefix $FOLDER ${BASE_BRANCH:-master}`:$BRANCH --force && \"
