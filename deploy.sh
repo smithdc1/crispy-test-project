@@ -14,6 +14,12 @@ do
   echo "$entry"
 done
 
+echo "home"
+for entry in "$HOME"/*
+do
+  echo "$entry"
+done
+
 
 
 if [ -z "$ACCESS_TOKEN" ] && [ -z "$GITHUB_TOKEN" ]
@@ -52,7 +58,7 @@ fi
 
 echo "change directory"
 # Directs the action to the the Github workspace.
-cd $GITHUB_WORKSPACE/build && \
+cd $HOME && \
 
 # Configures Git.
 echo "git init"
@@ -107,18 +113,18 @@ done
 #copy files
 echo "copy files"
 
-cp -a $GITHUB_WORKSPACE/docs/. $GITHUB_WORKSPACE/build/docs/
+cp -a $GITHUB_WORKSPACE/docs/. $HOME/build/docs/
 
 
 
 echo "build folder"
-for entry in "$GITHUB_WORKSPACE/build"/*
+for entry in "$HOME/build"/*
 do
   echo "$entry"
 done
 
 echo "build docs folder"
-for entry in "$GITHUB_WORKSPACE/build/docs"/*
+for entry in "$HOME/build/docs"/*
 do
   echo "$entry"
 done
@@ -130,6 +136,6 @@ git add -f docs && \
 
 
 git commit -m "Deploying to ${BRANCH} from ${BASE_BRANCH:-gh-pages} ${GITHUB_SHA}" --quiet && \
-git push $REPOSITORY_PATH `git subtree split --prefix $FOLDER ${BASE_BRANCH:-gh-pages}`:$BRANCH --force && \"
+#git push $REPOSITORY_PATH `git subtree split --prefix $FOLDER ${BASE_BRANCH:-gh-pages}`:$BRANCH --force && \"
 
 echo "Deployment succesful!"
