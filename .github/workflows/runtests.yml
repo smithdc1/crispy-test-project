@@ -35,7 +35,7 @@ jobs:
         python create_html.py
     - name: deploy html
       env:
-        ACCESS_TOKEN: ${{ secrets.GH_PAT }}
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN  }}
         BASE_BRANCH: gh-pages # The branch the action should deploy from.
         BRANCH: gh-pages # The branch the action should deploy to.
       run: |
