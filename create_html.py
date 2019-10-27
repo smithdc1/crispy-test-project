@@ -38,7 +38,7 @@ print(filename)
 #make docs folder
 
 os.makedirs(os.getcwd() + '/build/docs/')
-path = os.getcwd() + '/build/docs/' + filename
+path = os.getcwd() + filename
 print(path)
 
 with open("path", "w") as file:
