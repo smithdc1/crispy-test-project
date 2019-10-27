@@ -81,7 +81,7 @@ echo ${GITHUB_REPOSITORY}
 REPOSITORY_PATH="https://${ACCESS_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" && \
 echo "Initializes the repository path using the access token"
 
-2git pull $REPOSITORY_PATH gh-pages
+#git pull $REPOSITORY_PATH gh-pages
 
 
 
