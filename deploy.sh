@@ -83,7 +83,7 @@ echo ${BASE_BRANCH:-master}
 git checkout "${BASE_BRANCH:-master}" && \
 echo "checked out"
 
-for entry in "$GITHUB_WORKSPACE/build"/*
+for entry in "$GITHUB_WORKSPACE/build/docs"/*
 do
   echo "$entry"
 done
