@@ -106,7 +106,8 @@ done
 
 #copy files
 echo "copy files"
-cp -a $GITHUB_WORKSPACE/docs/. $GITHUB_WORKSPACE/build/
+
+cp -a $GITHUB_WORKSPACE/docs/. $GITHUB_WORKSPACE/build/docs/
 
 
 
