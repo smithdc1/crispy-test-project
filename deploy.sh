@@ -83,6 +83,12 @@ echo ${BASE_BRANCH:-master}
 git checkout "${BASE_BRANCH:-master}" && \
 echo "checked out"
 
+for entry in "$GITHUB_WORKSPACE"/*
+do
+  echo "$entry"
+done
+
+
 # Commits the data to Github.
 echo "Deploying to GitHub..." && \
 git add -f docs && \
