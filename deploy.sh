@@ -128,7 +128,7 @@ echo "copy files"
 cp -a $GITHUB_WORKSPACE/docs/. $HOME/build/docs/
 
 #create index
-python create_index.py
+python $GITHUB_WORKSPACE/create_index.py
 
 echo "build folder"
 for entry in "$HOME/build"/*
