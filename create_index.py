@@ -1,5 +1,5 @@
 from yattag import Doc
-from bs4 import BeautifulSoup
+#from bs4 import BeautifulSoup
 import os
 
 
@@ -20,7 +20,7 @@ with tag('html'):
                     text('')
 
 
-soup = BeautifulSoup(doc.getvalue(), 'html.parser').prettify()
+soup = doc.getvalue()
 
 with open('/home/runner/build/index.html', 'w') as file:
     file.write(soup)
