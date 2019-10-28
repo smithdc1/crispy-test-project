@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     u'crispy-test-project.herokuapp.com',
+    u'testserver',
     u'127.0.0.1'
 ]
 
@@ -42,11 +43,15 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # dependencies
     'crispy_forms',
+    'crispy_forms_materialize',
+   # 'crispy-forms-bootstrap2',
     'crispy_forms_semantic_ui',
     # internal apps
     'bootstrap3',
     'bootstrap4',
     'bootstrap4_3',
+   # 'materialize',
+   # 'bootstrap',
     'semantic',
 )
 
@@ -78,7 +83,7 @@ TEMPLATES = [
     },
 ]
 
-CRISPY_ALLOWED_TEMPLATE_PACKS = ('bootstrap', 'uni_form', 'bootstrap3', 'bootstrap4', 'semantic-ui',)
+CRISPY_ALLOWED_TEMPLATE_PACKS = ('materialize_css_forms', 'bootstrap', 'uni_form', 'bootstrap3', 'bootstrap4', 'semantic-ui',)
 
 WSGI_APPLICATION = 'test_project.wsgi.application'
 

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <!-- Required meta tags always come first -->
+  <meta charset="utf-8"/>
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
+  <!-- Semantic UI CSS -->
+  <link href="https://cdn.jsdelivr.net/semantic-ui/2.1.8/semantic.min.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body>
+  <div class="page-wrap">
+   <div class="ui inverted segment">
+    <div class="ui inverted secondary pointing text menu">
+     <div class="header item">
+      Crispy Test Project
+     </div>
+     <a class="item" href="/bootstrap3">
+      Bootstrap 3
+     </a>
+     <a class="item" href="/bootstrap4">
+      Bootstrap 4
+     </a>
+     <a class="active item" href="/semantic">
+      <i class="selected radio icon">
+      </i>
+      Semantic UI
+     </a>
+    </div>
+   </div>
+   <div class="ui segment">
+    <h1 class="ui header">
+     Semantic UI layouts
+    </h1>
+    <div class="ui grid">
+     <div class="eight wide column">
+      <h2 class="ui header">
+       <i class="align justify icon">
+       </i>
+       <div class="content">
+        Default
+       </div>
+      </h2>
+      <div class="ui form">
+       <form method="post">
+        <input name="csrfmiddlewaretoken" type="hidden" value="nsidQXsg6QxrPOhpPWKzZ0NxeiPxwvtLVJe2CsqVgCs5qdqIJpIU7Ji748DfkqNq"/>
+        <div class="control-group" id="div_id_text_input">
+         <label class="control-label requiredField" for="id_text_input">
+          Text input
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls">
+          <input class="textinput textInput" id="id_text_input" name="text_input" required="" type="text"/>
+         </div>
+        </div>
+        <div class="control-group" id="div_id_textarea">
+         <label class="control-label requiredField" for="id_textarea">
+          Textarea
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls">
+          <textarea class="textarea" cols="40" id="id_textarea" name="textarea" required="" rows="10">
+</textarea>
+         </div>
+        </div>
+        <div class="control-group" id="div_id_radio_buttons">
+         <label class="control-label requiredField" for="id_radio_buttons_0">
+          Radio buttons
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls">
+          <label class="radio" for="id_radio_buttons_1">
+           <input id="id_radio_buttons_1" name="radio_buttons" type="radio" value="option_one"/>
+           Option one is this and that be sure to include why it's great
+          </label>
+          <label class="radio" for="id_radio_buttons_2">
+           <input checked="checked" id="id_radio_buttons_2" name="radio_buttons" type="radio" value="option_two"/>
+           Option two can is something else and selecting it will deselect option one
+          </label>
+         </div>
+        </div>
+        <div class="control-group" id="div_id_checkboxes">
+         <label class="control-label requiredField" for="">
+          Checkboxes
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls" style="background: #FAFAFA">
+          <label class="checkbox" for="id_checkboxes_1">
+           <input checked="checked" id="id_checkboxes_1" name="checkboxes" style="background: #FAFAFA" type="checkbox" value="option_one"/>
+           Option one is this and that be sure to include why it's great
+          </label>
+          <label class="checkbox" for="id_checkboxes_2">
+           <input id="id_checkboxes_2" name="checkboxes" style="background: #FAFAFA" type="checkbox" value="option_two"/>
+           Option two can also be checked and included in form results
+          </label>
+          <label class="checkbox" for="id_checkboxes_3">
+           <input id="id_checkboxes_3" name="checkboxes" style="background: #FAFAFA" type="checkbox" value="option_three"/>
+           Option three can yes, you guessed it also be checked and included in form results
+          </label>
+          <p class="help-block" id="hint_id_checkboxes">
+           <strong>
+            Note:
+           </strong>
+           Labels surround all the options for much larger click areas and a more usable form.
+          </p>
+         </div>
+        </div>
+        <div class="form-actions">
+         <input class="btn btn-primary btn-primary" id="submit-id-save_changes" name="save_changes" type="submit" value="Save changes">
+          <input class="btn btn-primary" id="submit-id-cancel" name="cancel" type="submit" value="Cancel">
+          </input>
+         </input>
+        </div>
+       </form>
+      </div>
+     </div>
+     <div class="eight wide column">
+      <h2 class="ui header">
+       <i class="align justify icon">
+       </i>
+       <div class="content">
+        Default
+       </div>
+      </h2>
+      <div class="ui form">
+       <form method="post">
+        <input name="csrfmiddlewaretoken" type="hidden" value="nsidQXsg6QxrPOhpPWKzZ0NxeiPxwvtLVJe2CsqVgCs5qdqIJpIU7Ji748DfkqNq"/>
+        <div class="control-group error" id="div_id_text_input">
+         <label class="control-label requiredField" for="id_text_input">
+          Text input
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls">
+          <input class="textinput textInput" id="id_text_input" name="text_input" required="" type="text"/>
+          <span class="help-inline" id="error_1_id_text_input">
+           <strong>
+            This field is required.
+           </strong>
+          </span>
+         </div>
+        </div>
+        <div class="control-group error" id="div_id_textarea">
+         <label class="control-label requiredField" for="id_textarea">
+          Textarea
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls">
+          <textarea class="textarea" cols="40" id="id_textarea" name="textarea" required="" rows="10">
+</textarea>
+          <span class="help-inline" id="error_1_id_textarea">
+           <strong>
+            This field is required.
+           </strong>
+          </span>
+         </div>
+        </div>
+        <div class="control-group error" id="div_id_radio_buttons">
+         <label class="control-label requiredField" for="id_radio_buttons_0">
+          Radio buttons
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls">
+          <p class="help-block" id="error_1_id_radio_buttons">
+           <strong>
+            This field is required.
+           </strong>
+          </p>
+          <label class="radio" for="id_radio_buttons_1">
+           <input id="id_radio_buttons_1" name="radio_buttons" type="radio" value="option_one"/>
+           Option one is this and that be sure to include why it's great
+          </label>
+          <label class="radio" for="id_radio_buttons_2">
+           <input id="id_radio_buttons_2" name="radio_buttons" type="radio" value="option_two"/>
+           Option two can is something else and selecting it will deselect option one
+          </label>
+         </div>
+        </div>
+        <div class="control-group error" id="div_id_checkboxes">
+         <label class="control-label requiredField" for="">
+          Checkboxes
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls" style="background: #FAFAFA">
+          <p class="help-block" id="error_1_id_checkboxes">
+           <strong>
+            This field is required.
+           </strong>
+          </p>
+          <label class="checkbox" for="id_checkboxes_1">
+           <input id="id_checkboxes_1" name="checkboxes" style="background: #FAFAFA" type="checkbox" value="option_one"/>
+           Option one is this and that be sure to include why it's great
+          </label>
+          <label class="checkbox" for="id_checkboxes_2">
+           <input id="id_checkboxes_2" name="checkboxes" style="background: #FAFAFA" type="checkbox" value="option_two"/>
+           Option two can also be checked and included in form results
+          </label>
+          <label class="checkbox" for="id_checkboxes_3">
+           <input id="id_checkboxes_3" name="checkboxes" style="background: #FAFAFA" type="checkbox" value="option_three"/>
+           Option three can yes, you guessed it also be checked and included in form results
+          </label>
+          <p class="help-block" id="hint_id_checkboxes">
+           <strong>
+            Note:
+           </strong>
+           Labels surround all the options for much larger click areas and a more usable form.
+          </p>
+         </div>
+        </div>
+        <div class="form-actions">
+         <input class="btn btn-primary btn-primary" id="submit-id-save_changes" name="save_changes" type="submit" value="Save changes">
+          <input class="btn btn-primary" id="submit-id-cancel" name="cancel" type="submit" value="Cancel">
+          </input>
+         </input>
+        </div>
+       </form>
+      </div>
+     </div>
+     <div class="eight wide column">
+      <h2 class="ui header">
+       <i class="columns icon">
+       </i>
+       <div class="content">
+        Horizontal form
+       </div>
+      </h2>
+      <div class="ui form">
+       <form method="post">
+        <input name="csrfmiddlewaretoken" type="hidden" value="nsidQXsg6QxrPOhpPWKzZ0NxeiPxwvtLVJe2CsqVgCs5qdqIJpIU7Ji748DfkqNq"/>
+        <div class="control-group" id="div_id_text_input">
+         <label class="control-label requiredField" for="id_text_input">
+          Text input
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls">
+          <input class="textinput textInput" id="id_text_input" name="text_input" required="" type="text"/>
+         </div>
+        </div>
+        <div class="control-group" id="div_id_textarea">
+         <label class="control-label requiredField" for="id_textarea">
+          Textarea
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls">
+          <textarea class="textarea" cols="40" id="id_textarea" name="textarea" required="" rows="6">
+</textarea>
+         </div>
+        </div>
+        <div class="control-group" id="div_id_radio_buttons">
+         <label class="control-label requiredField" for="id_radio_buttons_0">
+          Radio buttons
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls">
+          <label class="radio" for="id_radio_buttons_1">
+           <input id="id_radio_buttons_1" name="radio_buttons" type="radio" value="option_one"/>
+           Option one is this and that be sure to include why it's great
+          </label>
+          <label class="radio" for="id_radio_buttons_2">
+           <input checked="checked" id="id_radio_buttons_2" name="radio_buttons" type="radio" value="option_two"/>
+           Option two can is something else and selecting it will deselect option one
+          </label>
+         </div>
+        </div>
+        <div class="control-group" id="div_id_checkboxes">
+         <label class="control-label requiredField" for="">
+          Checkboxes
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls">
+          <label class="checkbox" for="id_checkboxes_1">
+           <input checked="checked" id="id_checkboxes_1" name="checkboxes" type="checkbox" value="option_one"/>
+           Option one is this and that be sure to include why it's great
+          </label>
+          <label class="checkbox" for="id_checkboxes_2">
+           <input id="id_checkboxes_2" name="checkboxes" type="checkbox" value="option_two"/>
+           Option two can also be checked and included in form results
+          </label>
+          <label class="checkbox" for="id_checkboxes_3">
+           <input id="id_checkboxes_3" name="checkboxes" type="checkbox" value="option_three"/>
+           Option three can yes, you guessed it also be checked and included in form results
+          </label>
+          <p class="help-block" id="hint_id_checkboxes">
+           <strong>
+            Note:
+           </strong>
+           Labels surround all the options for much larger click areas and a more usable form.
+          </p>
+         </div>
+        </div>
+        <div class="control-group" id="div_id_appended_text">
+         <label class="control-label requiredField" for="id_appended_text">
+          Appended text
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls">
+          <div class="input-append">
+           <input class="textinput textInput" id="id_appended_text" name="appended_text" required="" type="text"/>
+           <span class="add-on">
+            .00
+           </span>
+          </div>
+          <p class="help-block" id="hint_id_appended_text">
+           Here's more help text
+          </p>
+         </div>
+        </div>
+        <div class="control-group" id="div_id_appended_text2">
+         <label class="control-label requiredField" for="id_appended_text2">
+          Appended text2
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls">
+          <div class="input-append">
+           <input class="form-control-lg textinput textInput" id="id_appended_text2" name="appended_text2" required="" type="text"/>
+           <span class="add-on">
+            .00
+           </span>
+          </div>
+          <p class="help-block" id="hint_id_appended_text2">
+           And a bigger appended text field
+          </p>
+         </div>
+        </div>
+        <div class="control-group" id="div_id_prepended_text">
+         <label class="control-label requiredField" for="id_prepended_text">
+          Prepended text
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls">
+          <div class="input-prepend">
+           <span class="add-on active">
+            <input checked="checked" id="" name="" type="checkbox" value=""/>
+           </span>
+           <input class="textinput textInput" id="id_prepended_text" name="prepended_text" required="" type="text"/>
+          </div>
+         </div>
+        </div>
+        <div class="control-group" id="div_id_prepended_text_two">
+         <label class="control-label requiredField" for="id_prepended_text_two">
+          Prepended text two
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls">
+          <div class="input-prepend">
+           <span class="add-on">
+            @
+           </span>
+           <input class="textinput textInput" id="id_prepended_text_two" name="prepended_text_two" required="" type="text"/>
+          </div>
+         </div>
+        </div>
+        <div class="control-group" id="div_id_multicolon_select">
+         <label class="control-label requiredField" for="id_multicolon_select">
+          Multicolon select
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls">
+          <select class="selectmultiple" id="id_multicolon_select" multiple="" name="multicolon_select" required="">
+           <option value="1">
+            1
+           </option>
+           <option value="2">
+            2
+           </option>
+           <option value="3">
+            3
+           </option>
+           <option value="4">
+            4
+           </option>
+           <option value="5">
+            5
+           </option>
+          </select>
+         </div>
+        </div>
+        <div class="form-actions">
+         <input class="btn btn-primary btn-primary" id="submit-id-save_changes" name="save_changes" type="submit" value="Save changes">
+          <input class="btn btn-primary" id="submit-id-cancel" name="cancel" type="submit" value="Cancel">
+          </input>
+         </input>
+        </div>
+       </form>
+      </div>
+     </div>
+     <div class="eight wide column">
+      <h2 class="ui header">
+       <i class="columns icon">
+       </i>
+       <div class="content">
+        Horizontal form
+       </div>
+      </h2>
+      <div class="ui form">
+       <form method="post">
+        <input name="csrfmiddlewaretoken" type="hidden" value="nsidQXsg6QxrPOhpPWKzZ0NxeiPxwvtLVJe2CsqVgCs5qdqIJpIU7Ji748DfkqNq"/>
+        <div class="control-group error" id="div_id_text_input">
+         <label class="control-label requiredField" for="id_text_input">
+          Text input
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls">
+          <input class="textinput textInput" id="id_text_input" name="text_input" required="" type="text"/>
+          <span class="help-inline" id="error_1_id_text_input">
+           <strong>
+            This field is required.
+           </strong>
+          </span>
+         </div>
+        </div>
+        <div class="control-group error" id="div_id_textarea">
+         <label class="control-label requiredField" for="id_textarea">
+          Textarea
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls">
+          <textarea class="textarea" cols="40" id="id_textarea" name="textarea" required="" rows="6">
+</textarea>
+          <span class="help-inline" id="error_1_id_textarea">
+           <strong>
+            This field is required.
+           </strong>
+          </span>
+         </div>
+        </div>
+        <div class="control-group error" id="div_id_radio_buttons">
+         <label class="control-label requiredField" for="id_radio_buttons_0">
+          Radio buttons
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls">
+          <p class="help-block" id="error_1_id_radio_buttons">
+           <strong>
+            This field is required.
+           </strong>
+          </p>
+          <label class="radio" for="id_radio_buttons_1">
+           <input id="id_radio_buttons_1" name="radio_buttons" type="radio" value="option_one"/>
+           Option one is this and that be sure to include why it's great
+          </label>
+          <label class="radio" for="id_radio_buttons_2">
+           <input id="id_radio_buttons_2" name="radio_buttons" type="radio" value="option_two"/>
+           Option two can is something else and selecting it will deselect option one
+          </label>
+         </div>
+        </div>
+        <div class="control-group error" id="div_id_checkboxes">
+         <label class="control-label requiredField" for="">
+          Checkboxes
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls">
+          <p class="help-block" id="error_1_id_checkboxes">
+           <strong>
+            This field is required.
+           </strong>
+          </p>
+          <label class="checkbox" for="id_checkboxes_1">
+           <input id="id_checkboxes_1" name="checkboxes" type="checkbox" value="option_one"/>
+           Option one is this and that be sure to include why it's great
+          </label>
+          <label class="checkbox" for="id_checkboxes_2">
+           <input id="id_checkboxes_2" name="checkboxes" type="checkbox" value="option_two"/>
+           Option two can also be checked and included in form results
+          </label>
+          <label class="checkbox" for="id_checkboxes_3">
+           <input id="id_checkboxes_3" name="checkboxes" type="checkbox" value="option_three"/>
+           Option three can yes, you guessed it also be checked and included in form results
+          </label>
+          <p class="help-block" id="hint_id_checkboxes">
+           <strong>
+            Note:
+           </strong>
+           Labels surround all the options for much larger click areas and a more usable form.
+          </p>
+         </div>
+        </div>
+        <div class="control-group error" id="div_id_appended_text">
+         <label class="control-label requiredField" for="id_appended_text">
+          Appended text
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls">
+          <div class="input-append">
+           <input class="textinput textInput" id="id_appended_text" name="appended_text" required="" type="text"/>
+           <span class="add-on">
+            .00
+           </span>
+          </div>
+          <span class="help-inline" id="error_1_id_appended_text">
+           <strong>
+            This field is required.
+           </strong>
+          </span>
+          <p class="help-block" id="hint_id_appended_text">
+           Here's more help text
+          </p>
+         </div>
+        </div>
+        <div class="control-group error" id="div_id_appended_text2">
+         <label class="control-label requiredField" for="id_appended_text2">
+          Appended text2
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls">
+          <div class="input-append">
+           <input class="form-control-lg textinput textInput" id="id_appended_text2" name="appended_text2" required="" type="text"/>
+           <span class="add-on">
+            .00
+           </span>
+          </div>
+          <span class="help-inline" id="error_1_id_appended_text2">
+           <strong>
+            This field is required.
+           </strong>
+          </span>
+          <p class="help-block" id="hint_id_appended_text2">
+           And a bigger appended text field
+          </p>
+         </div>
+        </div>
+        <div class="control-group error" id="div_id_prepended_text">
+         <label class="control-label requiredField" for="id_prepended_text">
+          Prepended text
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls">
+          <div class="input-prepend">
+           <span class="add-on active">
+            <input checked="checked" id="" name="" type="checkbox" value=""/>
+           </span>
+           <input class="textinput textInput" id="id_prepended_text" name="prepended_text" required="" type="text"/>
+          </div>
+          <span class="help-inline" id="error_1_id_prepended_text">
+           <strong>
+            This field is required.
+           </strong>
+          </span>
+         </div>
+        </div>
+        <div class="control-group error" id="div_id_prepended_text_two">
+         <label class="control-label requiredField" for="id_prepended_text_two">
+          Prepended text two
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls">
+          <div class="input-prepend">
+           <span class="add-on">
+            @
+           </span>
+           <input class="textinput textInput" id="id_prepended_text_two" name="prepended_text_two" required="" type="text"/>
+          </div>
+          <span class="help-inline" id="error_1_id_prepended_text_two">
+           <strong>
+            This field is required.
+           </strong>
+          </span>
+         </div>
+        </div>
+        <div class="control-group error" id="div_id_multicolon_select">
+         <label class="control-label requiredField" for="id_multicolon_select">
+          Multicolon select
+          <span class="asteriskField">
+           *
+          </span>
+         </label>
+         <div class="controls">
+          <select class="selectmultiple" id="id_multicolon_select" multiple="" name="multicolon_select" required="">
+           <option value="1">
+            1
+           </option>
+           <option value="2">
+            2
+           </option>
+           <option value="3">
+            3
+           </option>
+           <option value="4">
+            4
+           </option>
+           <option value="5">
+            5
+           </option>
+          </select>
+          <span class="help-inline" id="error_1_id_multicolon_select">
+           <strong>
+            This field is required.
+           </strong>
+          </span>
+         </div>
+        </div>
+        <div class="form-actions">
+         <input class="btn btn-primary btn-primary" id="submit-id-save_changes" name="save_changes" type="submit" value="Save changes">
+          <input class="btn btn-primary" id="submit-id-cancel" name="cancel" type="submit" value="Cancel">
+          </input>
+         </input>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/semantic-ui/2.1.8/semantic.min.js">
+  </script>
+ </body>
+</html>
