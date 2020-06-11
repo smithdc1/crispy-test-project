@@ -18,7 +18,7 @@ def index(request):
         os.makedirs(filename)
     except FileExistsError as e:
         assert e.errno is errno.EEXIST
-    filename += "/" + ("myfile-" * 10) + ".txt"
+    filename += "/" + ("myfile-" * 1) + ".txt"
     with open(filename, "w") as f:
         f.write('Hello world')
     instance = WithFileField(my_file=filename)

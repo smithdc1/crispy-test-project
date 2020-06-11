@@ -25,6 +25,9 @@
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
     <div class="col-lg-12">
+        {{ default_form.file_field_raw|as_crispy_field }}
+
+
         <h3>Default form</h3>
         {% crispy default_form %}
     </div>
